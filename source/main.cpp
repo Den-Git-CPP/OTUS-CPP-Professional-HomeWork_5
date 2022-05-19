@@ -1,52 +1,36 @@
+﻿
 #include <iostream>
-#include <vector>
-#include <variant>
 #include <memory>
 
-#include "coord.h"
-#include "line.h"
-#include "circle.h"
-#include "rectangle.h"
-
-using GeoObj = std::variant<Line, Circle, Rectangle>;
-
-class PollObj
-{
-public:
-	explicit PollObj() = default;
-	PollObj(std::initializer_list<GeoObj>l) {
-		createFigure = std::move(l);
-	};
-	~PollObj() = default;
-	void add(const GeoObj& ob) {
-		createFigure.push_back(ob);
-	};
-	void del(const GeoObj& ob) {
-		createFigure.push_back(ob);
-	};
-	void draw() {
-			for (const GeoObj& geoobj : createFigure) {
-			std::visit([](const auto& obj) {
-				obj.draw(); 
-					   },
-					   geoobj);
-		}
-	}
-private:
-	std::vector<GeoObj> createFigure;
-};
-
+#include "model.h"
+#include "view.h"
+#include "controller.h"
+#include "base_primitive.h"
 
 int main() {
-	// 
-	PollObj	b {	Line		{Coord{1,2},Coord{3,4}},
-				Circle		{Coord{5,5},2},
-				Rectangle	{Coord{3,3},Coord{6,4}},
-				Line		{Coord{1,2},Coord{3,4}},
-				Rectangle	{Coord{3,3},Coord{6,4}}
-		};
-	
-	b.draw();
+	//создаем пространство шаблона MVC
+	graph_project model{};
+	view_project view{ model };
+	controller canvas(model, view);
+
+	//загружаем проект
+	canvas.import_project("Document");
+
+	//Созданием и добавляем на экран примитив Line
+	auto line = std::shared_ptr <base_primitive>(
+		new Line{ Coord{1,2},Coord{3,4} }
+	);
+	canvas.add_primitive(line);
+	//Созданием и добавляем на экран примитив Rectangle
+	auto rectangle = std::shared_ptr <base_primitive>(
+		new Rectangle{ Coord{3,3},Coord{6,4} }
+	);
+	canvas.add_primitive(rectangle);
+	//Созданием и добавляем на экран примитив Circle
+	auto circle = std::shared_ptr <base_primitive>(
+		new  Circle{ Coord{5,5},2 }
+	);
+	canvas.add_primitive(circle);
 
 	return 0;
 }

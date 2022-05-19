@@ -7,12 +7,16 @@ else()
 endif()
 
 configure_file(version.h.in version.h)
- 
-add_executable(vector_editor_cli 
-source/main.cpp
+
+file(GLOB vector_editor_cpp
+ "${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp"
 )
 
-set_target_properties(vector_editor_cli 
+add_executable(vector_editor_cli 
+${vector_editor_cpp}
+)
+
+set_target_properties(vector_editor_cli git
 PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
@@ -32,7 +36,7 @@ if (MSVC)
  else ()
     target_compile_options(vector_editor_cli 
     PRIVATE
-    -Wall -Wextra -pedantic -Werror
+    -Wextra -pedantic -Werror
         )
 endif()
 
