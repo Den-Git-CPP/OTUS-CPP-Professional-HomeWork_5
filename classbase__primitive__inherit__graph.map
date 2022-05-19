@@ -1,0 +1,6 @@
+<map id="base_primitive" name="base_primitive">
+<area shape="rect" id="node1" title="Базовый класс для всех фигур" alt="" coords="54,5,161,32"/>
+<area shape="rect" id="node2" href="$class_circle.html" title="Класс представляющий Окружность" alt="" coords="5,80,60,107"/>
+<area shape="rect" id="node3" href="$class_line.html" title="Класс представляющий Линию" alt="" coords="84,80,131,107"/>
+<area shape="rect" id="node4" href="$class_rectangle.html" title="Класс представляющий прямоугольник" alt="" coords="155,80,235,107"/>
+</map>

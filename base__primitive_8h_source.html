@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Векторный редактор: Исходный файл include/base_primitive.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Векторный редактор<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">Проект простейшего графического векторного редактора</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">base_primitive.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="base__primitive_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#pragma region Coord</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_coord.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="class_coord.html">Coord</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_coord.html#add896c4f3fb15b4ad762b5270855345c">   18</a></span>    <a class="code hl_function" href="class_coord.html#add896c4f3fb15b4ad762b5270855345c">Coord</a>() : x{ 0 }, y{ 0 } {}</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_coord.html#a273831c53d6a3edf1bd71e85adc13f9c">   25</a></span>    <a class="code hl_function" href="class_coord.html#a273831c53d6a3edf1bd71e85adc13f9c">Coord</a>(<span class="keywordtype">int</span> newx, <span class="keywordtype">int</span> newy)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        : x{ newx }, y{ newy }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {}</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_coord.html#a8e0216962b79273c646627da8c2bc619">   29</a></span>    <a class="code hl_class" href="class_coord.html">Coord</a> <a class="code hl_function" href="class_coord.html#a8e0216962b79273c646627da8c2bc619">operator- </a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="class_coord.html">Coord</a>{ -x, -y };</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_coord.html#ac0f6c24a34ea829024ca9a6c6b31cee4">   32</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_coord.html#ac0f6c24a34ea829024ca9a6c6b31cee4">operator+= </a>(<a class="code hl_class" href="class_coord.html">Coord</a> c) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        *<span class="keyword">this</span> = *<span class="keyword">this</span> + c;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_coord.html#ac9b53838cfbb9548c21907bdb53bab78">   35</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_coord.html#ac9b53838cfbb9548c21907bdb53bab78">operator-= </a>(<a class="code hl_class" href="class_coord.html">Coord</a> c) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_function" href="class_coord.html#ac0f6c24a34ea829024ca9a6c6b31cee4">operator+=</a>(-c);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_coord.html#a241f54c14ddcdf9a55853c58ab3d7a31">   39</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_coord.html#a241f54c14ddcdf9a55853c58ab3d7a31">getX</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span> x;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_coord.html#a65fb33a860936d7e383b0bb4e7d1db98">   42</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_coord.html#a65fb33a860936d7e383b0bb4e7d1db98">getY</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">return</span> y;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_coord.html#a0d03c5fae288ab3654ca09ef80b320a5">   46</a></span>    <span class="keyword">friend</span> <a class="code hl_class" href="class_coord.html">Coord</a> <a class="code hl_friend" href="class_coord.html#a0d03c5fae288ab3654ca09ef80b320a5">operator+ </a>(<a class="code hl_class" href="class_coord.html">Coord</a> c1, <a class="code hl_class" href="class_coord.html">Coord</a> c2) {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="class_coord.html">Coord</a>{ c1.x + c2.x, c1.y + c2.y };</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_coord.html#ab1f79e92c99dc9af7d16f75056fde9a6">   49</a></span>    <span class="keyword">friend</span> <a class="code hl_class" href="class_coord.html">Coord</a> <a class="code hl_function" href="class_coord.html#a8e0216962b79273c646627da8c2bc619">operator- </a>(<a class="code hl_class" href="class_coord.html">Coord</a> c1, <a class="code hl_class" href="class_coord.html">Coord</a> c2) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="class_coord.html">Coord</a>{ c1.x - c2.x, c1.y - c2.y };</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_coord.html#a750a5c1b55d2cba5a245188ec31fb33a">   53</a></span>    <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="class_coord.html#a750a5c1b55d2cba5a245188ec31fb33a">operator&lt;&lt; </a>(std::ostream&amp; strm, <a class="code hl_class" href="class_coord.html">Coord</a> c) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">return</span> strm &lt;&lt; <span class="charliteral">&#39;(&#39;</span> &lt;&lt; c.x &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; c.y &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">int</span> x;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">int</span> y;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>};</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classbase__primitive.html">   66</a></span><span class="keyword">class </span><a class="code hl_class" href="classbase__primitive.html">base_primitive</a> {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classbase__primitive.html#a1a612de093efd01344d13577b1c76f5c">   69</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classbase__primitive.html#a1a612de093efd01344d13577b1c76f5c">~base_primitive</a>() {};</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classbase__primitive.html#a8a4832f7acfec12152d2bf062a3aae79">   70</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classbase__primitive.html#a8a4832f7acfec12152d2bf062a3aae79">move_figure</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_coord.html">Coord</a>&amp; c) = 0;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classbase__primitive.html#a289fc38db783689a6d0190cdf9b509b8">   71</a></span>    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="classbase__primitive.html#a289fc38db783689a6d0190cdf9b509b8">draw_figure</a>() = 0;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#pragma region Line</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_line.html">   80</a></span><span class="keyword">class </span><a class="code hl_class" href="class_line.html">Line</a> :<span class="keyword">public</span> <a class="code hl_class" href="classbase__primitive.html">base_primitive</a> {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_line.html#a41333dde1d1357c9a93b4ffdfae915d5">   88</a></span>    <a class="code hl_function" href="class_line.html#a41333dde1d1357c9a93b4ffdfae915d5">Line</a>(<a class="code hl_class" href="class_coord.html">Coord</a> f, <a class="code hl_class" href="class_coord.html">Coord</a> t) :</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        from{ f }, to{ t } {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_line.html#af18447238883377a0071d2276a4ac0a5">   95</a></span>    <a class="code hl_function" href="class_line.html#af18447238883377a0071d2276a4ac0a5">~Line</a>()<span class="keyword"> override </span>{};</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_line.html#a0d845448b66bc32e7427ffce8926f3c2">  100</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_line.html#a0d845448b66bc32e7427ffce8926f3c2">move_figure</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_coord.html">Coord</a>&amp; c) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        from += c;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        to += c;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_line.html#ae36066cdc82ea37dc734bfeb87d515b9">  108</a></span>    std::string <a class="code hl_function" href="class_line.html#ae36066cdc82ea37dc734bfeb87d515b9">draw_figure</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        std::stringstream ss;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        ss &lt;&lt; <span class="stringliteral">&quot;LINE from &quot;</span> &lt;&lt; from &lt;&lt; <span class="stringliteral">&quot; to &quot;</span> &lt;&lt; to;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    };</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_class" href="class_coord.html">Coord</a> from;  </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <a class="code hl_class" href="class_coord.html">Coord</a> to;    </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>};</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">#pragma region Circle</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_circle.html">  124</a></span><span class="keyword">class </span><a class="code hl_class" href="class_circle.html">Circle</a> :<span class="keyword">public</span> <a class="code hl_class" href="classbase__primitive.html">base_primitive</a> {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="class_circle.html#a1f2e28f50aea48ed1f8312f42e73c556">  132</a></span>    <a class="code hl_function" href="class_circle.html#a1f2e28f50aea48ed1f8312f42e73c556">Circle</a>(<a class="code hl_class" href="class_coord.html">Coord</a> c, <span class="keywordtype">int</span> r) :</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        center{ c }, rad{ r } {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="class_circle.html#a6385ef0f49f36149893dc0fa5fa27eca">  135</a></span>    <a class="code hl_function" href="class_circle.html#a6385ef0f49f36149893dc0fa5fa27eca">~Circle</a>()<span class="keyword"> override </span>{};</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="class_circle.html#a2628f2ef9097e7caa0bc74b2b3c810ec">  140</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_circle.html#a2628f2ef9097e7caa0bc74b2b3c810ec">move_figure</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_coord.html">Coord</a>&amp; c) {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        center += c;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="class_circle.html#ad6c93ec22eade50cdc04a3af820f7ab5">  147</a></span>    std::string <a class="code hl_function" href="class_circle.html#ad6c93ec22eade50cdc04a3af820f7ab5">draw_figure</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        std::stringstream ss;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        ss &lt;&lt; <span class="stringliteral">&quot;CIRCLE at &quot;</span> &lt;&lt; center &lt;&lt; <span class="stringliteral">&quot; with radius &quot;</span> &lt;&lt; rad;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    };</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <a class="code hl_class" href="class_coord.html">Coord</a> center;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordtype">int</span> rad;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>};</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">#pragma region Rectangle</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="class_rectangle.html">  165</a></span><span class="keyword">class </span><a class="code hl_class" href="class_rectangle.html">Rectangle</a> :<span class="keyword">public</span> <a class="code hl_class" href="classbase__primitive.html">base_primitive</a> {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="class_rectangle.html#ab5b87b0baa70fe484a48d1fd4ec0c3a6">  173</a></span>    <a class="code hl_function" href="class_rectangle.html#ab5b87b0baa70fe484a48d1fd4ec0c3a6">Rectangle</a>(<a class="code hl_class" href="class_coord.html">Coord</a> f, <a class="code hl_class" href="class_coord.html">Coord</a> t) :</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        from{ f }, to{ t } {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="class_rectangle.html#a6e3ed18583022b35e04c109345d1e7d6">  176</a></span>    <a class="code hl_function" href="class_rectangle.html#a6e3ed18583022b35e04c109345d1e7d6">~Rectangle</a>()<span class="keyword"> override </span>{};</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="class_rectangle.html#aa90967c27b0586b59be91a131a91fade">  181</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_rectangle.html#aa90967c27b0586b59be91a131a91fade">move_figure</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_coord.html">Coord</a>&amp; c) {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        from += c;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        to += c;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    }</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="class_rectangle.html#a1f210142ea9fd3bebdc580a73dcc1453">  189</a></span>    std::string <a class="code hl_function" href="class_rectangle.html#a1f210142ea9fd3bebdc580a73dcc1453">draw_figure</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        std::stringstream ss;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        ss &lt;&lt; <span class="stringliteral">&quot;RECTANGLE from &quot;</span> &lt;&lt; from &lt;&lt; <span class="stringliteral">&quot; to &quot;</span> &lt;&lt; to;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    };</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <a class="code hl_class" href="class_coord.html">Coord</a> from;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <a class="code hl_class" href="class_coord.html">Coord</a> to;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>};</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="ttc" id="aclass_circle_html"><div class="ttname"><a href="class_circle.html">Circle</a></div><div class="ttdoc">Класс представляющий Окружность</div><div class="ttdef"><b>Definition:</b> base_primitive.h:124</div></div>
+<div class="ttc" id="aclass_circle_html_a1f2e28f50aea48ed1f8312f42e73c556"><div class="ttname"><a href="class_circle.html#a1f2e28f50aea48ed1f8312f42e73c556">Circle::Circle</a></div><div class="ttdeci">Circle(Coord c, int r)</div><div class="ttdoc">Конструктор обьекта Окружность</div><div class="ttdef"><b>Definition:</b> base_primitive.h:132</div></div>
+<div class="ttc" id="aclass_circle_html_a2628f2ef9097e7caa0bc74b2b3c810ec"><div class="ttname"><a href="class_circle.html#a2628f2ef9097e7caa0bc74b2b3c810ec">Circle::move_figure</a></div><div class="ttdeci">void move_figure(const Coord &amp;c)</div><div class="ttdoc">Функция изменения координат объекта</div><div class="ttdef"><b>Definition:</b> base_primitive.h:140</div></div>
+<div class="ttc" id="aclass_circle_html_a6385ef0f49f36149893dc0fa5fa27eca"><div class="ttname"><a href="class_circle.html#a6385ef0f49f36149893dc0fa5fa27eca">Circle::~Circle</a></div><div class="ttdeci">~Circle() override</div><div class="ttdef"><b>Definition:</b> base_primitive.h:135</div></div>
+<div class="ttc" id="aclass_circle_html_ad6c93ec22eade50cdc04a3af820f7ab5"><div class="ttname"><a href="class_circle.html#ad6c93ec22eade50cdc04a3af820f7ab5">Circle::draw_figure</a></div><div class="ttdeci">std::string draw_figure() override</div><div class="ttdoc">Функция прорисовки окружности</div><div class="ttdef"><b>Definition:</b> base_primitive.h:147</div></div>
+<div class="ttc" id="aclass_coord_html"><div class="ttname"><a href="class_coord.html">Coord</a></div><div class="ttdef"><b>Definition:</b> base_primitive.h:12</div></div>
+<div class="ttc" id="aclass_coord_html_a0d03c5fae288ab3654ca09ef80b320a5"><div class="ttname"><a href="class_coord.html#a0d03c5fae288ab3654ca09ef80b320a5">Coord::operator+</a></div><div class="ttdeci">friend Coord operator+(Coord c1, Coord c2)</div><div class="ttdef"><b>Definition:</b> base_primitive.h:46</div></div>
+<div class="ttc" id="aclass_coord_html_a241f54c14ddcdf9a55853c58ab3d7a31"><div class="ttname"><a href="class_coord.html#a241f54c14ddcdf9a55853c58ab3d7a31">Coord::getX</a></div><div class="ttdeci">int getX() const</div><div class="ttdef"><b>Definition:</b> base_primitive.h:39</div></div>
+<div class="ttc" id="aclass_coord_html_a273831c53d6a3edf1bd71e85adc13f9c"><div class="ttname"><a href="class_coord.html#a273831c53d6a3edf1bd71e85adc13f9c">Coord::Coord</a></div><div class="ttdeci">Coord(int newx, int newy)</div><div class="ttdoc">конструктор для класса с переданными координатами</div><div class="ttdef"><b>Definition:</b> base_primitive.h:25</div></div>
+<div class="ttc" id="aclass_coord_html_a65fb33a860936d7e383b0bb4e7d1db98"><div class="ttname"><a href="class_coord.html#a65fb33a860936d7e383b0bb4e7d1db98">Coord::getY</a></div><div class="ttdeci">int getY() const</div><div class="ttdef"><b>Definition:</b> base_primitive.h:42</div></div>
+<div class="ttc" id="aclass_coord_html_a750a5c1b55d2cba5a245188ec31fb33a"><div class="ttname"><a href="class_coord.html#a750a5c1b55d2cba5a245188ec31fb33a">Coord::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;strm, Coord c)</div><div class="ttdef"><b>Definition:</b> base_primitive.h:53</div></div>
+<div class="ttc" id="aclass_coord_html_a8e0216962b79273c646627da8c2bc619"><div class="ttname"><a href="class_coord.html#a8e0216962b79273c646627da8c2bc619">Coord::operator-</a></div><div class="ttdeci">Coord operator-() const</div><div class="ttdef"><b>Definition:</b> base_primitive.h:29</div></div>
+<div class="ttc" id="aclass_coord_html_ac0f6c24a34ea829024ca9a6c6b31cee4"><div class="ttname"><a href="class_coord.html#ac0f6c24a34ea829024ca9a6c6b31cee4">Coord::operator+=</a></div><div class="ttdeci">void operator+=(Coord c)</div><div class="ttdef"><b>Definition:</b> base_primitive.h:32</div></div>
+<div class="ttc" id="aclass_coord_html_ac9b53838cfbb9548c21907bdb53bab78"><div class="ttname"><a href="class_coord.html#ac9b53838cfbb9548c21907bdb53bab78">Coord::operator-=</a></div><div class="ttdeci">void operator-=(Coord c)</div><div class="ttdef"><b>Definition:</b> base_primitive.h:35</div></div>
+<div class="ttc" id="aclass_coord_html_add896c4f3fb15b4ad762b5270855345c"><div class="ttname"><a href="class_coord.html#add896c4f3fb15b4ad762b5270855345c">Coord::Coord</a></div><div class="ttdeci">Coord()</div><div class="ttdoc">конструктор для класса с координатами 0,0</div><div class="ttdef"><b>Definition:</b> base_primitive.h:18</div></div>
+<div class="ttc" id="aclass_line_html"><div class="ttname"><a href="class_line.html">Line</a></div><div class="ttdoc">Класс представляющий Линию</div><div class="ttdef"><b>Definition:</b> base_primitive.h:80</div></div>
+<div class="ttc" id="aclass_line_html_a0d845448b66bc32e7427ffce8926f3c2"><div class="ttname"><a href="class_line.html#a0d845448b66bc32e7427ffce8926f3c2">Line::move_figure</a></div><div class="ttdeci">void move_figure(const Coord &amp;c)</div><div class="ttdoc">Функция изменения координат объекта</div><div class="ttdef"><b>Definition:</b> base_primitive.h:100</div></div>
+<div class="ttc" id="aclass_line_html_a41333dde1d1357c9a93b4ffdfae915d5"><div class="ttname"><a href="class_line.html#a41333dde1d1357c9a93b4ffdfae915d5">Line::Line</a></div><div class="ttdeci">Line(Coord f, Coord t)</div><div class="ttdoc">Конструктор обьекта Линии</div><div class="ttdef"><b>Definition:</b> base_primitive.h:88</div></div>
+<div class="ttc" id="aclass_line_html_ae36066cdc82ea37dc734bfeb87d515b9"><div class="ttname"><a href="class_line.html#ae36066cdc82ea37dc734bfeb87d515b9">Line::draw_figure</a></div><div class="ttdeci">std::string draw_figure() override</div><div class="ttdoc">Функция прорисовки линии</div><div class="ttdef"><b>Definition:</b> base_primitive.h:108</div></div>
+<div class="ttc" id="aclass_line_html_af18447238883377a0071d2276a4ac0a5"><div class="ttname"><a href="class_line.html#af18447238883377a0071d2276a4ac0a5">Line::~Line</a></div><div class="ttdeci">~Line() override</div><div class="ttdoc">Деструткор</div><div class="ttdef"><b>Definition:</b> base_primitive.h:95</div></div>
+<div class="ttc" id="aclass_rectangle_html"><div class="ttname"><a href="class_rectangle.html">Rectangle</a></div><div class="ttdoc">Класс представляющий прямоугольник</div><div class="ttdef"><b>Definition:</b> base_primitive.h:165</div></div>
+<div class="ttc" id="aclass_rectangle_html_a1f210142ea9fd3bebdc580a73dcc1453"><div class="ttname"><a href="class_rectangle.html#a1f210142ea9fd3bebdc580a73dcc1453">Rectangle::draw_figure</a></div><div class="ttdeci">std::string draw_figure() override</div><div class="ttdoc">Функция прорисовки прямоугольника</div><div class="ttdef"><b>Definition:</b> base_primitive.h:189</div></div>
+<div class="ttc" id="aclass_rectangle_html_a6e3ed18583022b35e04c109345d1e7d6"><div class="ttname"><a href="class_rectangle.html#a6e3ed18583022b35e04c109345d1e7d6">Rectangle::~Rectangle</a></div><div class="ttdeci">~Rectangle() override</div><div class="ttdef"><b>Definition:</b> base_primitive.h:176</div></div>
+<div class="ttc" id="aclass_rectangle_html_aa90967c27b0586b59be91a131a91fade"><div class="ttname"><a href="class_rectangle.html#aa90967c27b0586b59be91a131a91fade">Rectangle::move_figure</a></div><div class="ttdeci">void move_figure(const Coord &amp;c)</div><div class="ttdoc">Функция изменения координат объекта</div><div class="ttdef"><b>Definition:</b> base_primitive.h:181</div></div>
+<div class="ttc" id="aclass_rectangle_html_ab5b87b0baa70fe484a48d1fd4ec0c3a6"><div class="ttname"><a href="class_rectangle.html#ab5b87b0baa70fe484a48d1fd4ec0c3a6">Rectangle::Rectangle</a></div><div class="ttdeci">Rectangle(Coord f, Coord t)</div><div class="ttdoc">Конструктор обьекта Прямоугольник</div><div class="ttdef"><b>Definition:</b> base_primitive.h:173</div></div>
+<div class="ttc" id="aclassbase__primitive_html"><div class="ttname"><a href="classbase__primitive.html">base_primitive</a></div><div class="ttdoc">Базовый класс для всех фигур</div><div class="ttdef"><b>Definition:</b> base_primitive.h:66</div></div>
+<div class="ttc" id="aclassbase__primitive_html_a1a612de093efd01344d13577b1c76f5c"><div class="ttname"><a href="classbase__primitive.html#a1a612de093efd01344d13577b1c76f5c">base_primitive::~base_primitive</a></div><div class="ttdeci">virtual ~base_primitive()</div><div class="ttdef"><b>Definition:</b> base_primitive.h:69</div></div>
+<div class="ttc" id="aclassbase__primitive_html_a289fc38db783689a6d0190cdf9b509b8"><div class="ttname"><a href="classbase__primitive.html#a289fc38db783689a6d0190cdf9b509b8">base_primitive::draw_figure</a></div><div class="ttdeci">virtual std::string draw_figure()=0</div></div>
+<div class="ttc" id="aclassbase__primitive_html_a8a4832f7acfec12152d2bf062a3aae79"><div class="ttname"><a href="classbase__primitive.html#a8a4832f7acfec12152d2bf062a3aae79">base_primitive::move_figure</a></div><div class="ttdeci">virtual void move_figure(const Coord &amp;c)=0</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

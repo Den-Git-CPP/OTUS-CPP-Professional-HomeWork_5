@@ -1,0 +1,4 @@
+<map id="Line" name="Line">
+<area shape="rect" id="node1" title="Класс представляющий Линию" alt="" coords="35,80,82,107"/>
+<area shape="rect" id="node2" href="$classbase__primitive.html" title="Базовый класс для всех фигур" alt="" coords="5,5,112,32"/>
+</map>
