@@ -3,7 +3,6 @@
 #include <sstream>
 #include "model.h"
 
-
 graph_project::graph_project(const std::string& path) {
 	load_project(path);
 }

@@ -34,14 +34,16 @@ public:
 	 * @param умный указатель на примитив
 	 */
 	void add_primitive_to_project(std::shared_ptr<base_primitive>& primitive);
-
-
-	void remove_primitive_from_project(std::shared_ptr<base_primitive>& primitive);
-	
 	/**
 	 * @brief Функция удаления примитива из проекта
 	 * 
 	 * @param умный указатель на примитив
+	 */
+	void remove_primitive_from_project(std::shared_ptr<base_primitive>& primitive);
+	/**
+	 * @brief Функция сохранения проекта в файл
+	 * 
+	 * @param path путь к файлу проекта
 	 */
 	void save_project(const std::string& path);
 

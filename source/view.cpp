@@ -1,14 +1,11 @@
 #include "view.h"
 #include "iostream"
-
-
     view_project::view_project(const graph_project& _model): model{_model} {
      }
 
     void view_project::redraw() {
         render();
     }
-
     void view_project::render() {
         std::cout << "-------------------------------\n";
         const auto& redrawing = model.get_elements_redrawing();
@@ -21,4 +18,3 @@
         }
         std::cout << "-------------------------------\n\n\n";
     }
-
